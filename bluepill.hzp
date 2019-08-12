@@ -1,0 +1,157 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="bluepill" target="8" version="2">
+  <project Name="bluepill">
+    <configuration
+      CMSIS_CORE="No"
+      Name="Common"
+      Placement="Flash"
+      Target="STM32F103C8"
+      arm_architecture="v7M"
+      arm_core_type="Cortex-M3"
+      arm_fp_abi="Soft"
+      arm_fpu_type="None"
+      arm_keep_assembly="Yes"
+      arm_library_check_memory_segment_overflow="No"
+      arm_library_optimization="Small"
+      arm_linker_heap_size="0"
+      arm_linker_jtag_pad_pre_dr="1"
+      arm_linker_jtag_pad_pre_ir="5"
+      arm_linker_process_stack_size="0"
+      arm_linker_stack_size="0"
+      arm_simulator_memory_simulation_filename="$(TargetsDir)/STM32/STM32SimulatorMemory$(HostDLL)"
+      arm_simulator_memory_simulation_parameter="STM32F103C8;0x10000;0x5000"
+      arm_supply_absolute_file_path="No"
+      arm_target_loader_applicable_loaders="Flash"
+      arm_target_loader_default_loader="Flash"
+      arm_target_read_only_software_breakpoints="Disabled"
+      arm_target_trace_interface_type="None"
+      build_intermediate_directory="$(ProjectName)"
+      build_output_directory="$(ProjectName)"
+      c_preprocessor_definitions="DRO=STM32"
+      c_user_include_directories=".;ezcpp;cortexm;cortexm/stm32;$(TargetsDir)/STM32/include"
+      debug_initial_breakpoint_set_option="Never"
+      debug_register_definition_file="$(TargetsDir)/STM32/STM32F103_Peripherals.xml"
+      gcc_c_language_standard="c11"
+      gcc_cplusplus_language_standard="c++14"
+      gcc_enable_all_warnings="Yes"
+      gcc_entry_point="cstartup"
+      gcc_wchar_size="16-Bit"
+      keep_linker_script_file="No"
+      link_dependent_projects="No"
+      link_include_standard_libraries="Yes"
+      link_time_optimization="No"
+      linker_memory_map_file="$(TargetsDir)/STM32/STM32F103C8_MemoryMap.xml"
+      linker_printf_fmt_level="int"
+      linker_printf_fp_enabled="No"
+      linker_printf_width_precision_supported="No"
+      linker_scanf_character_group_matching_enabled="No"
+      linker_scanf_fmt_level="int"
+      linker_scanf_fp_enabled="No"
+      linker_section_placement_file="$(StudioDir)/targets/Cortex_M/flash_placement.xml"
+      macros=""
+      project_directory=""
+      project_type="Executable"
+      property_groups_file_path="$(TargetsDir)/STM32/propertyGroups.xml"
+      target_get_partname_script="GetPartName()"
+      target_match_partname_script="MatchPartName(&quot;$(Target)&quot;)"
+      target_script_file="$(TargetsDir)/STM32/STM32_Target.js"
+      target_trace_initialize_script="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+    <configuration
+      Name="Flash"
+      arm_target_flash_loader_file_path="$(LOADER:$(TargetsDir)/STM32/Release/Loader_rpc.elf)"
+      arm_target_loader_can_erase_all="Yes"
+      arm_target_loader_can_lock_all="No"
+      arm_target_loader_can_lock_range="No"
+      arm_target_loader_can_unlock_all="No"
+      arm_target_loader_can_unlock_range="No"
+      target_reset_script="FLASHReset()" />
+    <configuration Name="RAM" target_reset_script="Reset()" />
+    <folder Name="ezcpp">
+      <configuration Name="Common" filter="" />
+      <file file_name="ezcpp/bitbanger.cpp" />
+      <file file_name="ezcpp/bitbanger.h" />
+      <file file_name="ezcpp/boolish.cpp" />
+      <file file_name="ezcpp/boolish.h" />
+      <file file_name="ezcpp/char.cpp">
+        <configuration Name="THUMB Debug" build_exclude_from_build="Yes" />
+      </file>
+      <file file_name="ezcpp/char.h" />
+      <file file_name="ezcpp/cheaptricks.cpp" />
+      <file file_name="ezcpp/cheaptricks.h" />
+      <file file_name="ezcpp/cstr.cpp" />
+      <file file_name="ezcpp/cstr.h" />
+      <file file_name="ezcpp/eztypes.h" />
+      <file file_name="ezcpp/hook.h" />
+      <file file_name="ezcpp/index.h" />
+      <file file_name="ezcpp/minimath.cpp" />
+      <file file_name="ezcpp/minimath.h" />
+      <file file_name="ezcpp/polledtimer.cpp" />
+      <file file_name="ezcpp/polledtimer.h" />
+      <file file_name="ezcpp/retriggerablemonostable.cpp" />
+      <file file_name="ezcpp/retriggerablemonostable.h" />
+      <file file_name="ezcpp/softpwm.cpp" />
+      <file file_name="ezcpp/softpwm.h" />
+      <file file_name="ezcpp/stopwatch.cpp" />
+      <file file_name="ezcpp/stopwatch.h" />
+      <file file_name="ezcpp/tableofpointers.h" />
+      <file file_name="ezcpp/textkey.cpp" />
+      <file file_name="ezcpp/textkey.h" />
+      <file file_name="ezcpp/quadraturecounter.cpp" />
+      <file file_name="ezcpp/quadraturecounter.h" />
+    </folder>
+    <folder Name="cortexm">
+      <file file_name="cortexm/clocks.h" />
+      <file file_name="cortexm/clockstarter.cpp" />
+      <file file_name="cortexm/core-atomic.h" />
+      <file file_name="cortexm/core_cm3.cpp" />
+      <file file_name="cortexm/core_cm3.h" />
+      <file file_name="cortexm/cruntime.h" />
+      <file file_name="cortexm/cstartup.cpp" />
+      <file file_name="cortexm/fifo.cpp" />
+      <file file_name="cortexm/fifo.h" />
+      <file file_name="cortexm/nvic.cpp" />
+      <file file_name="cortexm/nvic.h" />
+      <file file_name="cortexm/peripheraltypes.h" />
+      <file file_name="cortexm/systick.cpp" />
+      <file file_name="cortexm/systick.h" />
+      <file file_name="cortexm/wtf.cpp" />
+      <file file_name="cortexm/wtf.h" />
+      <file file_name="cortexm/core_cmInstr.h" />
+      <file file_name="cortexm/cortexm3.s" />
+      <folder Name="stm">
+        <file file_name="cortexm/stm32/gpio.h" />
+        <file file_name="cortexm/stm32/uart.h" />
+        <file file_name="cortexm/stm32/uart.cpp" />
+        <file file_name="cortexm/stm32/gpio.cpp" />
+        <file file_name="cortexm/stm32/clocks.cpp" />
+        <file file_name="cortexm/stm32/afio.cpp" />
+        <file file_name="cortexm/stm32/afio.h" />
+        <file file_name="cortexm/stm32/exti.cpp" />
+        <file file_name="cortexm/stm32/exti.h" />
+        <file file_name="cortexm/stm32/peripheral.h" />
+        <file file_name="cortexm/stm32/stm32.h" />
+        <file file_name="cortexm/stm32/stm32.cpp" />
+        <file file_name="cortexm/stm32/flashcontrol.cpp" />
+      </folder>
+      <file file_name="cortexm/peripheralband.h" />
+    </folder>
+    <file file_name="scaraboo.cpp" />
+    <file file_name="project.ld" />
+  </project>
+  <configuration Name="THUMB Debug" inherited_configurations="THUMB;Debug" />
+  <configuration
+    Name="THUMB"
+    Platform="ARM"
+    arm_instruction_set="Thumb"
+    arm_library_instruction_set="Thumb"
+    c_preprocessor_definitions="__THUMB"
+    hidden="Yes" />
+  <configuration
+    Name="Debug"
+    c_preprocessor_definitions="DEBUG"
+    gcc_debugging_level="Level 3"
+    gcc_omit_frame_pointer="Yes"
+    gcc_optimization_level="None"
+    hidden="Yes" />
+  <configuration Name="Common" gcc_entry_point="cstartup" />
+</solution>
