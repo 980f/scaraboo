@@ -98,6 +98,7 @@
       <file file_name="ezcpp/textkey.h" />
       <file file_name="ezcpp/quadraturecounter.cpp" />
       <file file_name="ezcpp/quadraturecounter.h" />
+      <file file_name="ezcpp/charscanner.cpp" />
     </folder>
     <folder Name="cortexm">
       <file file_name="cortexm/clocks.h" />
@@ -132,11 +133,15 @@
         <file file_name="cortexm/stm32/stm32.h" />
         <file file_name="cortexm/stm32/stm32.cpp" />
         <file file_name="cortexm/stm32/flashcontrol.cpp" />
+        <file file_name="cortexm/stm32/uartuser.cpp" />
+        <file file_name="cortexm/stm32/uartuser.h" />
+        <file file_name="cortexm/stm32/timer.cpp" />
       </folder>
       <file file_name="cortexm/peripheralband.h" />
     </folder>
     <file file_name="scaraboo.cpp" />
     <file file_name="project.ld" />
+    <file file_name="cortexm/stm32/bluepill.cpp" />
   </project>
   <configuration Name="THUMB Debug" inherited_configurations="THUMB;Debug" />
   <configuration

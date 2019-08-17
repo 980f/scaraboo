@@ -2,3 +2,4 @@ cortexm/
 ezcpp/
 bluepill/
 bluepill.hzs
+*bak\.[0-9]*
